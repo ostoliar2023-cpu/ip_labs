@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Лабораторна №3 — Столяр Олег</title>
+  <style>
+    :root { color-scheme: light; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #f1f5fa; color: #18324e; font: 17px/1.65 Georgia, serif; }
+    .wrap { max-width: 1120px; margin: auto; padding: 28px 18px 50px; }
+    header, section, aside, footer { background: white; border-radius: 16px; padding: 24px; margin-bottom: 16px; box-shadow: 0 5px 22px #142b4810; }
+    h1, h2 { color: #123d69; line-height: 1.25; }
+    h1 { margin-top: 0; }
+    .button { display: inline-block; background: #c62828; color: white; padding: 10px 20px; border-radius: 9px; text-decoration: none; font: bold 16px Arial, sans-serif; }
+    .logo { height: 300px; max-width: 100%; object-fit: contain; }
+    .placeholder { border: 2px dashed #aac0d5; background: #f7faff; border-radius: 12px; padding: 24px; }
+    video { width: 80%; height: 540px; max-width: 100%; background: #101b2b; }
+    audio { width: min(100%, 600px); }
+    iframe { width: 100%; height: 420px; border: 0; border-radius: 12px; }
+    .grid { display: grid; grid-template-columns: 2fr 1fr; gap: 16px; }
+    .grid section { min-width: 0; }
+    .thumbs { list-style: none; padding: 0; }
+    .thumbs li { margin: 0 0 18px; }
+    .thumbs a { display: block; color: #164e82; }
+    .thumbs img { display: block; width: 100%; max-width: 300px; aspect-ratio: 16/9; object-fit: cover; background: #e8edf5; border-radius: 8px; }
+    @media (max-width: 800px) { .grid { grid-template-columns: 1fr; } video { width: 100%; height: auto; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <p><a href="../index.html">← Головна сторінка лабораторних</a></p>
+      <h1>IT College Lviv — YouTube-канал коледжу</h1>
+      <p>Лабораторна робота №3 · Столяр Олег · МТ-41 · 28.10.2026</p>
+    </header>
+    <main>
+      <section>
+        <h2>Логотип коледжу</h2>
+        <div class="placeholder">Тут потрібно додати офіційний логотип коледжу у файл <code>media/logo.png</code>.</div>
+        <!-- Після завантаження логотипа замініть блок вище на: <img class="logo" src="media/logo.png" alt="Логотип коледжу"> -->
+      </section>
+      <section>
+        <h2>Про канал коледжу</h2>
+        <p>На YouTube-каналі коледжу можна переглядати матеріали про навчання, події та студентське життя.</p>
+        <a class="button" href="https://www.youtube.com/@itcollegelviv" target="_blank" rel="noopener noreferrer">Підписатися</a>
+      </section>
+      <section>
+        <h2>Відео MP4</h2>
+        <video controls preload="metadata" height="540">
+          <source src="media/video.mp4" type="video/mp4">
+          Ваш браузер не підтримує відео. <a href="media/video.mp4">Завантажити MP4</a>.
+        </video>
+      </section>
+      <section>
+        <h2>Аудіозапис</h2>
+        <audio controls preload="metadata">
+          <source src="media/audio.m4a" type="audio/mp4">
+          Ваш браузер не підтримує аудіо. <a href="media/audio.m4a">Завантажити M4A</a>.
+        </audio>
+      </section>
+      <div class="grid">
+        <div>
+          <section>
+            <h2>Власне відео про навчання в коледжі</h2>
+            <div class="placeholder">Після запису й публікації власної трансляції на YouTube вставте сюди <code>&lt;iframe&gt;</code> через меню «Поділитися → Вставити».</div>
+          </section>
+          <section>
+            <h2>Карта «Університети та коледжі Львова»</h2>
+            <div class="placeholder">Після створення власної карти у Google My Maps (2 шари: «Університети» та «Коледжі», по 5 об’єктів) вставте сюди <code>&lt;iframe&gt;</code> з опції «Вбудувати на мій сайт».</div>
+          </section>
+        </div>
+        <aside>
+          <h2>П'ять відео для перегляду</h2>
+          <p>Замініть посилання та ID на п'ять обраних відео з YouTube.</p>
+          <ol class="thumbs">
+            <li><a href="https://www.youtube.com/@itcollegelviv" target="_blank" rel="noopener noreferrer">Відео 1 — додати посилання</a></li>
+            <li><a href="https://www.youtube.com/@itcollegelviv" target="_blank" rel="noopener noreferrer">Відео 2 — додати посилання</a></li>
+            <li><a href="https://www.youtube.com/@itcollegelviv" target="_blank" rel="noopener noreferrer">Відео 3 — додати посилання</a></li>
+            <li><a href="https://www.youtube.com/@itcollegelviv" target="_blank" rel="noopener noreferrer">Відео 4 — додати посилання</a></li>
+            <li><a href="https://www.youtube.com/@itcollegelviv" target="_blank" rel="noopener noreferrer">Відео 5 — додати посилання</a></li>
+          </ol>
+          <p>Шаблон мініатюри: <code>https://img.youtube.com/vi/VIDEO_ID/default.jpg</code>.</p>
+        </aside>
+      </div>
+    </main>
+    <footer>© 2026 Олег Столяр · Лабораторна робота №3</footer>
+  </div>
+</body>
+</html>
