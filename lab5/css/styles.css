@@ -1,18 +1,21 @@
-/* Лабораторна №5 — навчальний макет, варіант 3. */
+
 * { box-sizing: border-box; }
-body { margin: 0; background: #f3f5f8; color: #202c3c; font-family: Arial, Helvetica, sans-serif; line-height: 1.55; }
-.page { max-width: 1050px; margin: 48px auto; padding: 0 24px; }
-h1 { margin: 0 0 4px; font-size: 32px; font-weight: 700; }
-.subtitle { margin: 0 0 28px; color: #5b6573; }
-header#featured_container { margin: 20px 0 32px; border: 1px solid #d8e0e8; border-radius: 10px; background: #ffffff; overflow: hidden; box-shadow: 0 12px 32px rgba(16, 42, 69, .09); }
-#featured_container .featured-label { padding: 15px 28px; background: #12375a; color: #ffffff; font-size: 15px; font-weight: 700; }
-#featured_container .featured-content { padding: 48px 42px; border-top: 5px solid #d7aa47; background: linear-gradient(120deg, #ffffff 0%, #eaf2fa 100%); }
-#featured_container .eyebrow { margin: 0 0 12px; color: #9b7122; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; }
-#featured_container h2 { max-width: 680px; margin: 0 0 16px; color: #12375a; font-size: clamp(24px, 3vw, 38px); line-height: 1.2; }
-#featured_container p { max-width: 620px; }
-#featured_container .button { display: inline-block; margin-top: 16px; padding: 11px 20px; border: 2px solid #12375a; border-radius: 5px; color: #ffffff; background: #12375a; font-weight: 700; text-decoration: none; }
-#featured_container .button:hover { background: #ffffff; color: #12375a; }
-.note { padding: 22px 26px; border-left: 4px solid #d7aa47; background: #ffffff; }
-.note h2 { margin-top: 0; font-size: 20px; }
-code { padding: 2px 5px; background: #e7edf3; border-radius: 3px; }
-@media (max-width: 600px) { .page { margin: 24px auto; padding: 0 14px; } #featured_container .featured-content { padding: 28px 22px; } }
+body { margin: 0; font-family: Roboto, Arial, sans-serif; font-size: 16px; line-height: 1.42857143; color: #333; background: #fff; }
+.lab-title, .lab-subtitle, .source-note { max-width: 1170px; margin-left: auto; margin-right: auto; padding: 0 15px; }
+.lab-title { margin-top: 30px; margin-bottom: 5px; font-size: 30px; }
+.lab-subtitle { margin-top: 0; margin-bottom: 25px; color: #555; }
+.source-note { margin-top: 16px; margin-bottom: 30px; font-size: 14px; color: #666; }
+#featured_container { display: block; position: relative; width: 100%; background: #c2c2c2; padding: 26px 0 34px; }
+#featured_container::before { display: block; width: 100%; content: ''; height: 2px; background: linear-gradient(to right, #979797 0%, #979797 50%, #c2c2c2 100%); position: absolute; top: 0; left: 0; }
+#featured_container .container { width: 100%; max-width: 1170px; margin: 0 auto; padding: 0 15px; }
+#featured_container .form-group { margin-bottom: 0; }
+#featured_container .row { display: flex; flex-wrap: wrap; margin: 0 -12px; }
+#featured_container .views-col { width: 50%; padding: 12px; }
+#featured_container .views-col > div, #featured_container .views-col > div > span { display: block; height: 100%; }
+#featured_container a { display: block; position: relative; height: 100%; overflow: hidden; color: #fff; text-decoration: none; background: #555; }
+#featured_container img { display: block; width: 100%; height: auto; aspect-ratio: 2 / 1; object-fit: cover; transition: transform .25s ease; }
+#featured_container a:hover img { transform: scale(1.025); }
+#featured_container .shadow_featured { position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 28%, rgba(0,0,0,.8) 100%); }
+#featured_container h2 { position: absolute; left: 18px; right: 18px; bottom: 14px; margin: 0; font-size: 23px; line-height: 1.18; font-weight: 400; text-shadow: 0 1px 3px rgba(0,0,0,.4); }
+#featured_container h2 span { background: rgba(31,35,130,.9); box-decoration-break: clone; -webkit-box-decoration-break: clone; padding: 0 3px; }
+@media (max-width: 700px) { #featured_container .views-col { width: 100%; } #featured_container h2 { font-size: 19px; } .lab-title { font-size: 26px; } }
