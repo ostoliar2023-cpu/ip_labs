@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Лабораторна №4 — Анкета студента</title>
+<style>
+*{box-sizing:border-box}body{margin:0;padding:30px 15px;background:#eef3f9;color:#17385f;font-family:Georgia,'Times New Roman',serif}.container{max-width:900px;margin:auto}.card{background:#fff;padding:35px;border-radius:18px;margin-bottom:20px;box-shadow:0 5px 20px #1e3c640d}h1,h2{color:#123c6a}h1{font-size:36px;margin-bottom:15px}.subtitle{font-size:17px;line-height:1.6}.form-group{margin-bottom:22px}label{display:block;font-weight:bold;margin-bottom:9px}input:not([type=radio]):not([type=checkbox]),select,textarea{width:100%;padding:13px;border:1px solid #cbd7e6;border-radius:9px;font-size:16px;font-family:Arial,sans-serif}input:focus,select:focus,textarea:focus{outline:2px solid #3479c7;outline-offset:1px}.choices label{font-weight:normal;margin:12px 0}.choices input,.agreement input{margin-right:8px}textarea{min-height:120px;resize:vertical}.buttons{display:flex;gap:15px;flex-wrap:wrap}button{padding:14px 25px;border:0;border-radius:9px;font-size:16px;font-weight:bold;cursor:pointer}.submit-btn{background:#1768b3;color:white}.submit-btn:hover{background:#0e4e8b}.reset-btn{background:#e6ebf2;color:#17385f}.reset-btn:hover{background:#d3dce8}.back-link{color:#1768b3;text-decoration:none;font-size:17px}.back-link:hover{text-decoration:underline}footer{text-align:center;padding:20px;font-size:15px}@media(max-width:600px){.card{padding:22px}h1{font-size:27px}}
+</style>
+</head>
+<body><div class="container">
+<header class="card"><a class="back-link" href="../">← Головна сторінка лабораторних</a><h1>Анкета студента</h1><p class="subtitle">Лабораторна робота №4<br>Столяр Олег · МТ-41 · 29.10.2026</p></header>
+<main class="card"><h2>Заповніть анкету</h2><p>Будь ласка, введіть інформацію про себе. Поля, позначені зірочкою (*), обов'язкові.</p>
+<form id="studentForm">
+<div class="form-group"><label for="fullname">Прізвище, ім'я та по батькові *</label><input id="fullname" name="fullname" type="text" placeholder="Введіть ПІБ" required></div>
+<div class="form-group"><label for="group">Навчальна група *</label><input id="group" name="group" type="text" value="МТ-41" required></div>
+<div class="form-group"><label for="email">Електронна пошта *</label><input id="email" name="email" type="email" placeholder="example@gmail.com" required></div>
+<div class="form-group"><label for="birthdate">Дата народження</label><input id="birthdate" name="birthdate" type="date"></div>
+<div class="form-group"><label for="specialty">Спеціальність *</label><select id="specialty" name="specialty" required><option value="">Оберіть спеціальність</option><option value="telecom">Телекомунікації та радіотехніка</option><option value="computer">Комп'ютерна інженерія</option><option value="software">Інженерія програмного забезпечення</option><option value="other">Інша спеціальність</option></select></div>
+<div class="form-group"><label>Форма навчання *</label><div class="choices"><label><input type="radio" name="education" value="Денна" required>Денна</label><label><input type="radio" name="education" value="Заочна">Заочна</label></div></div>
+<div class="form-group"><label>Навчальні інтереси</label><div class="choices"><label><input type="checkbox" name="interests" value="HTML та CSS">HTML та CSS</label><label><input type="checkbox" name="interests" value="JavaScript">JavaScript</label><label><input type="checkbox" name="interests" value="Комп'ютерні мережі">Комп'ютерні мережі</label><label><input type="checkbox" name="interests" value="Кібербезпека">Кібербезпека</label><label><input type="checkbox" name="interests" value="Вебдизайн">Вебдизайн</label></div></div>
+<div class="form-group"><label for="comment">Додаткова інформація про себе</label><textarea id="comment" name="comment" placeholder="Розкажіть про свої захоплення, навички та цілі..."></textarea></div>
+<div class="form-group agreement"><label><input type="checkbox" id="agreement" required>Підтверджую правильність введених даних *</label></div>
+<div class="buttons"><button class="submit-btn" type="submit">Надіслати анкету</button><button class="reset-btn" type="reset">Очистити форму</button></div></form><p id="result" role="status" aria-live="polite"></p></main>
+<footer class="card">© 2026 Олег Столяр · Лабораторна робота №4</footer></div>
+<script>
+const form=document.getElementById('studentForm');const result=document.getElementById('result');form.addEventListener('submit',function(e){e.preventDefault();if(!form.reportValidity())return;const name=document.getElementById('fullname').value;result.textContent='Дякуємо, '+name+'! Анкету успішно заповнено.';result.style.color='green';result.style.fontWeight='bold';});form.addEventListener('reset',function(){result.textContent='';});
+</script>
+</body></html>
