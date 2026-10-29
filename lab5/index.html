@@ -1,33 +1,65 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="uk">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Лабораторна №5 — CSS Box Model</title>
+  <title>Лабораторна робота №5 — CSS Box Model, варіант 3</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <main class="page">
-    <h1>Лабораторна робота №5</h1>
-    <p class="subtitle">CSS Box Model · Developer Tools · Варіант 3</p>
+  <main>
+    <h1 class="lab-title">Лабораторна робота №5</h1>
+    <p class="lab-subtitle">CSS. Блочна модель та Developer Tools · Варіант 3 · <code>header#featured_container</code></p>
+    <header id="featured_container" role="link" aria-label="Featured News and Announcements">
+      <div class="container">
+        <div class="region region-featured">
+          <section class="views-element-container block block-views block-views-blockfront-page-news-block-2 clearfix" id="block-views-block-front-page-news-block-2">
+            <div class="form-group">
+              <div class="view view-front-page-news view-id-front_page_news view-display-id-block_2">
+                <div class="view-content">
+                  <div class="views-view-grid horizontal cols-2 clearfix">
+        <div class="row">
+          <div class="col-12 col-sm-6 views-col col-1">
+            <div><span><a href="https://lpnu.ua/news/zvit-rektora-pro-osnovni-dosiahnennia-lvivskoi-politekhniky-u-2025-rotsi-na-konferentsii" target="_blank" rel="noopener noreferrer">
+              <img src="https://lpnu.ua/sites/default/files/styles/teaser_720x360/public/2026/1/29/news/34785/lpfasad.jpg?itok=VHOV4lo0" width="720" height="360" alt="Фасад головного корпусу Львівської політехніки" class="img-responsive">
+              <div class="shadow_featured"></div>
+              <h2><span>Звіт ректора про основні досягнення Львівської політехніки у 2025 році на Конференції трудового колективу Університету</span></h2>
+            </a></span></div>
+          </div>
+          <div class="col-12 col-sm-6 views-col col-2">
+            <div><span><a href="https://lpnu.ua/news/instytuty-dosiahnennia-plany-motyvatsiia-tematychnyi-nomer-zhurnalu-lvivska-politekhnika" target="_blank" rel="noopener noreferrer">
+              <img src="https://lpnu.ua/sites/default/files/styles/teaser_720x360/public/2025/7/3/news/32359/zh-inst-tt.jpg?itok=drBw9Xfo" width="720" height="360" alt="Заставка до матеріалу" class="img-responsive">
+              <div class="shadow_featured"></div>
+              <h2><span>Інститути – досягнення, плани, мотивація: тематичний номер журналу «Львівська політехніка»</span></h2>
+            </a></span></div>
+          </div>
 
-    <!-- Навчальний макет: після аналізу lpnu.ua замінити вміст на фактичний header -->
-    <header id="featured_container" aria-label="Вибрані матеріали">
-      <div class="featured-label">Львівська політехніка</div>
-      <div class="featured-content">
-        <div>
-          <p class="eyebrow">Вибрані матеріали</p>
-          <h2>Національний університет «Львівська політехніка»</h2>
-          <p>Демонстрація блочної моделі, шрифтів і кольорів CSS для варіанта №3.</p>
-          <a class="button" href="https://lpnu.ua/" target="_blank" rel="noopener noreferrer">Перейти на сайт університету</a>
+        </div>
+        <div class="row">
+          <div class="col-12 col-sm-6 views-col col-1">
+            <div><span><a href="https://lpnu.ua/news/politekhnika-ekskursiina" target="_blank" rel="noopener noreferrer">
+              <img src="https://lpnu.ua/sites/default/files/styles/teaser_720x360/public/2024/7/15/news/28149/zobrazhennyaviber2024-07-1515-03-24-090.jpg?itok=y1MFM5L_" width="720" height="360" alt="Політехніка екскурсійна" class="img-responsive">
+              <div class="shadow_featured"></div>
+              <h2><span>Політехніка екскурсійна</span></h2>
+            </a></span></div>
+          </div>
+          <div class="col-12 col-sm-6 views-col col-2">
+            <div><span><a href="https://lpnu.ua/news/lvivska-politekhnika-u-reitynhakh-zakladiv-vyshchoi-osvity" target="_blank" rel="noopener noreferrer">
+              <img src="https://lpnu.ua/sites/default/files/styles/teaser_720x360/public/2022/3/11/news/18934/lplitart.jpg?itok=a0ZH6yci" width="720" height="360" alt="Фронтон головного корпусу Львівської політехніки" class="img-responsive">
+              <div class="shadow_featured"></div>
+              <h2><span>Львівська політехніка у рейтингах закладів вищої освіти</span></h2>
+            </a></span></div>
+          </div>
+        </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
       </div>
     </header>
-
-    <section class="note">
-      <h2>Що перевірити в Developer Tools</h2>
-      <p>Відкрийте сайт університету, натисніть F12 → Elements та знайдіть <code>header#featured_container</code>. Порівняйте реальну HTML-структуру і стилі з навчальним макетом, а потім перенесіть фактичні елементи й властивості.</p>
-    </section>
+    <p class="source-note">Навчальне відтворення блоку новин з офіційного сайту Львівської політехніки. Зображення завантажуються з сайту університету.</p>
   </main>
 </body>
 </html>
