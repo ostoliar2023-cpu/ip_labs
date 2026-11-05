@@ -70,9 +70,8 @@ h2 {
 
 /* Модальне вікно */
 #modal.hidden {
-    display: none;
+    display: none !important;
 }
-
 #modal {
     position: fixed;
     top: 0;
