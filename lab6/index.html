@@ -144,8 +144,9 @@
     const modal = document.getElementById("modal");
 
     subscribeButton.addEventListener("click", () => {
-        modal.classList.remove("hidden");
-    });
+    modal.classList.remove("hidden");
+    modal.style.display = "flex";
+});
 
     modal.addEventListener("click", (event) => {
         if (event.target === modal) {
