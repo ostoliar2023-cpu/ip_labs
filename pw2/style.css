@@ -69,3 +69,31 @@ body {
   height: 100%;
   border: none;
 }
+
+.partners {
+  background: #ffffff;
+  padding: 55px 20px;
+}
+
+.partners-logos {
+  max-width: 850px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  align-items: center;
+  justify-items: center;
+  gap: 32px 24px;
+}
+
+.partners-logos span {
+  color: #2d2d2d;
+  font-size: 18px;
+  font-weight: 800;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .partners-logos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
