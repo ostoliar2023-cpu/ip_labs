@@ -382,3 +382,20 @@ body {
     padding: 9px 15px;
   }
 }
+
+/* FIGMA PARTNERS LOGOS */
+
+.partners-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.partners-image {
+  display: block;
+  width: 100%;
+  max-width: 850px;
+  height: auto;
+}
